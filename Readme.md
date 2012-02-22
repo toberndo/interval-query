@@ -51,69 +51,59 @@ console.log(sequ.queryInterval(6, 8));
 
 ### Segment tree and Sequential
 
-##### Methods
-
-- `pushInterval(from, to)`
-    - Push interval to interval stack.
-    - **Parameters**
-      - `from`: interval start (number).
-      - `to`: interval end (number).
-- `pushArray(from, to, validate)`
-    - Push array of intervals.
-    - **Parameters**
-      - `from`: interval start points (array).
-      - `to`: interval end points (array).
-      - `validate`: validate intervals (boolean, default: true).
-- `clearIntervalStack()`
-    - clear the interval stack.
-- `queryPoint(point, resultFn)`
-    - query single point.
-    - **Parameters**
-      - `point`: (number).
-      - `resultFn`: result array of intervals (function).
-    - **Returns** `number of overlapping intervals`    
-- `queryPointArray(points, resultFn, validate)`
-    - query multiple points.
-    - **Parameters**
-      - `points`: (array).
-      - `resultFn`: result array of intervals (function).
-      - `validate`: validate points (boolean, default: true).
-    - **Returns** `number of overlapping intervals`
-- `queryInterval(from, to, options)`
-    - query single interval.
-    - **Parameters**
-      - `from`: interval start (number).
-      - `to`: interval end (number).
-      - `options`: (object).
-        - `endpoints`: include endpoints of interval in comparison, e.g. (1, 2) overlaps with (2, 3) (boolean, default: true).
-        - `resultFn`: result array of intervals (function).
-    - **Returns** `number of overlapping intervals`    
-- `queryIntervalArray(from, to, options)`
-    - query multiple intervals.
-    - **Parameters**
-      - `from`: interval start points (array).
-      - `to`: interval end points (array).
-      - `options`: (object).
-        - `endpoints`: include endpoints of interval in comparison, e.g. (1, 2) overlaps with (2, 3) (boolean, default: true).
-        - `resultFn`: result array of intervals (function).
-        - `validate`: validate intervals (boolean, default: true).
-    - **Returns** `number of overlapping intervals`
-- `queryOverlap()`
-    - query overlapping intervals for all intervals of the stack.
-    - **Returns**
-      - `intervals`: (array).
-        - `id`: interval id (number).
-        - `from`: interval start (number).
-        - `to`: interval end (number).
-        - `overlap`: overlapping interval ids (array).
+#####pushInterval(from, to)#####
+Push interval to interval stack.
+- `from`: interval start (number).
+- `to`: interval end (number).
+#####pushArray(from, to, validate)#####
+Push array of intervals.
+- `from`: interval start points (array).
+- `to`: interval end points (array).
+- `validate`: validate intervals (boolean, default: true).
+#####clearIntervalStack()#####
+Clear the interval stack.
+#####queryPoint(point, resultFn)#####
+Query single point.
+- `point`: (number).
+- `resultFn`: result array of intervals (function).
+- *Returns* overlapping intervals (number).
+#####queryPointArray(points, resultFn, validate)#####
+Query multiple points.
+- `points`: (array).
+- `resultFn`: result array of intervals (function).
+- `validate`: validate points (boolean, default: true).
+- *Returns* overlapping intervals (number).
+#####queryInterval(from, to, options)#####
+Query single interval.
+- `from`: interval start (number).
+- `to`: interval end (number).
+- `options`: (object).
+  - `endpoints`: include endpoints of interval in comparison, e.g. (1, 2) overlaps with (2, 3) (boolean, default: true).
+  - `resultFn`: result array of intervals (function).
+- *Returns* overlapping intervals (number).    
+#####queryIntervalArray(from, to, options)#####
+Query multiple intervals.
+- `from`: interval start points (array).
+- `to`: interval end points (array).
+- `options`: (object).
+  - `endpoints`: include endpoints of interval in comparison, e.g. (1, 2) overlaps with (2, 3) (boolean, default: true).
+  - `resultFn`: result array of intervals (function).
+  - `validate`: validate intervals (boolean, default: true).
+- *Returns* overlapping intervals (number).
+#####queryOverlap()#####
+Query overlapping intervals for all intervals of the stack.
+- *Returns* intervals (array)
+  - interval: (object).
+    - `id`: interval id (number).
+    - `from`: interval start (number).
+    - `to`: interval end (number).
+    - `overlap`: overlapping interval ids (array).
 
 ### Segment tree only
 
-##### Methods
-
-- `buildTree()`
-    - Build tree structure.
-- `printTree()`
-    - Prints tree to console.
-- `printTreeTopDown()`
-    - Prints tree to console top down.
+#####buildTree()#####
+Build tree structure.
+#####printTree()#####
+Prints tree to console.
+#####printTreeTopDown()#####
+Prints tree to console top down.

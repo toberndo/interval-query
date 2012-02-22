@@ -107,11 +107,10 @@ Query multiple intervals.
 Query overlapping intervals for all intervals of the stack.
 
 - *Returns* intervals (array).
-  - interval: (object).
-    - `id`: interval id (number).
-    - `from`: interval start (number).
-    - `to`: interval end (number).
-    - `overlap`: overlapping interval ids (array).
+  - `id`: interval id (number).
+  - `from`: interval start (number).
+  - `to`: interval end (number).
+  - `overlap`: overlapping interval ids (array).
 
 ### Segment tree only
 
@@ -121,3 +120,7 @@ Build tree structure.
 Prints tree to console.
 #####printTreeTopDown()#####
 Prints tree to console top down.
+
+## Licence
+
+Use of this source code is governed by a MIT-style license that can be found in the LICENSE file.

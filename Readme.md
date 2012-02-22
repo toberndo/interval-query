@@ -106,7 +106,7 @@ Query multiple intervals.
 #####queryOverlap()#####
 Query overlapping intervals for all intervals of the stack.
 
-- *Returns* intervals (array)
+- *Returns* intervals (array).
   - interval: (object).
     - `id`: interval id (number).
     - `from`: interval start (number).

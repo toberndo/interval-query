@@ -28,6 +28,8 @@ The usage is as in the example above: we build a new tree object, push intervals
 then run certain queries on the tree. The segment tree is a static structure which means we cannot add further intervals
 once the tree is built. Rebuilding the tree is then required.
 
+![segment tree example](http://en.wikipedia.org/wiki/File:Segment_tree_instance.gif)
+
 ## Sequential
 
 The sequential algorithm simply traverses the array of intervals to search for overlaps. It builds up a dynamic structure

@@ -3,23 +3,10 @@ var should = require('should');
 var tree = require('../lib/segment-tree');
 var sequ = require('../lib/sequential');
 
+var random = require('./lib/random.js');
+
 tree = new tree.SegmentTree;
 sequ = new sequ.Sequential;
-
-var randomIntervals = function(from, to, num, range, maxLen, int) {
-  for(var i = 0; i < num; i++) {
-    var a,b;
-    a = Math.random() * range;
-    b = a + Math.random() * maxLen;
-    //console.log('%d,%d', a, b);
-    if (int) {
-      a = Math.floor(a);
-      b = Math.floor(b);
-    }
-    from.push(a);
-    to.push(b);
-  }
-}
 
 describe("s-tree", function() {
   
@@ -29,7 +16,7 @@ describe("s-tree", function() {
     var to = [];
     
     before(function() {
-      randomIntervals(from, to, 1000, 1000, 5, false);
+      random.intervals(from, to, 1000, 1000, 5, false);
     });
     
     beforeEach(function() {
@@ -78,7 +65,7 @@ describe("s-tree", function() {
     var to = [];
     
     before(function() {
-      randomIntervals(from, to, 10000, 10000, 10, false);
+      random.intervals(from, to, 10000, 10000, 10, false);
       //console.log(from.length);
     });
     

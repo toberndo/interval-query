@@ -2,7 +2,7 @@
   "name": "interval-query",
   "description": "A data structure for storing intervals and finding overlaps with either segment tree or sequential query",
   "homepage": "https://github.com/toberndo/interval-query",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Thomas Oberndörfer <toberndo@yarkon.de>",
   "devDependencies": {
     "mocha": "0.12.x",

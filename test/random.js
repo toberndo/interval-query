@@ -16,7 +16,7 @@ describe("s-tree", function() {
     var to = [];
     
     before(function() {
-      random.intervals(from, to, 1000, 1000, 5, false);
+      random.intervals(from, to, 1000, 1000, false);
     });
     
     beforeEach(function() {
@@ -51,6 +51,25 @@ describe("s-tree", function() {
       console.log('%d hits', tree.queryIntervalArray([50, 250, 700], [150, 300, 750]));
     });
     
+  });
+  
+    describe("100 intervals", function() {
+    
+    var from = [];
+    var to = [];
+    
+    before(function() {
+      random.intervals(from, to, 100, 100, false);
+    });
+    
+    beforeEach(function() {
+      tree.clearIntervalStack();
+      tree.pushArray(from, to);
+      tree.buildTree();
+      sequ.clearIntervalStack();
+      sequ.pushArray(from, to);
+    });
+    
     it("queryOverlap()", function() {
       var sequOver = sequ.queryOverlap();
       tree.queryOverlap().should.eql(sequOver);
@@ -65,7 +84,7 @@ describe("s-tree", function() {
     var to = [];
     
     before(function() {
-      random.intervals(from, to, 10000, 10000, 10, false);
+      random.intervals(from, to, 1000, 1000, false);
       //console.log(from.length);
     });
     

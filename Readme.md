@@ -123,6 +123,11 @@ Prints tree to console.
 #####printTreeTopDown()#####
 Prints tree to console top down.
 
+## Performance
+
+Detailed performance analysis in this blog post:
+http://www.chasinclouds.com/2012/02/segment-tree-implementation-in.html
+
 ## Licence
 
 Use of this source code is governed by a MIT-style license that can be found in the LICENSE file.

@@ -5,7 +5,7 @@ The main purpose of this module is to solve the following problem: given a set o
 
 ## Installation
 
-    npm install query-interval
+    npm install interval-query
 
 ## Example
 
